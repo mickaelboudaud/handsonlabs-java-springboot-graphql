@@ -3,7 +3,7 @@ type Country {
   name: String,
   nativeName: String,
   phone: String,
-  continent: String,
+  continentId: String,
   currencies: String,
   languageIds: [String]
 }
