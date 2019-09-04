@@ -4,6 +4,8 @@ import fr.maif.handsonlabs.javaspringbootgraphql.models.Continent;
 import fr.maif.handsonlabs.javaspringbootgraphql.services.repositories.ContinentRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ContinentService {
 
@@ -13,7 +15,7 @@ public class ContinentService {
         this.continentRepository = continentRepository;
     }
 
-    public Iterable<Continent> findAll() {
+    public List<Continent> findAll() {
         return continentRepository.findAll();
     }
 }

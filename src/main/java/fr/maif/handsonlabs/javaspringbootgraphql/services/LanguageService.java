@@ -4,6 +4,8 @@ import fr.maif.handsonlabs.javaspringbootgraphql.models.Language;
 import fr.maif.handsonlabs.javaspringbootgraphql.services.repositories.LanguageRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class LanguageService {
 
@@ -13,7 +15,7 @@ public class LanguageService {
         this.languageRepository = languageRepository;
     }
 
-    public Iterable<Language> findAll() {
+    public List<Language> findAll() {
         return languageRepository.findAll();
     }
 }

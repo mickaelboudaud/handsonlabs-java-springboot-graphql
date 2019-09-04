@@ -31,8 +31,8 @@ public class Country {
     private String currencies;
 
     @ElementCollection
-    @CollectionTable(name="countries_languages", joinColumns=@JoinColumn(name="country_id"))
-    @Column(name="language_id")
+    @CollectionTable(name = "countries_languages", joinColumns = @JoinColumn(name = "country_id"))
+    @Column(name = "language_id")
     private Set<String> languageIds;
 
     public String getId() {
