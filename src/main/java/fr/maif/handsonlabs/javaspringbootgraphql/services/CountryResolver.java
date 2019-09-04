@@ -24,7 +24,7 @@ public class CountryResolver implements GraphQLResolver<Country> {
         this.continentRepository = continentRepository;
         this.languageRepository = languageRepository;
     }
-    
+
     public Optional<Continent> continent(Country country) {
         return continentRepository.findById(country.getContinentId());
     }
