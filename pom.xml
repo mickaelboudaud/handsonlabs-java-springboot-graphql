@@ -37,7 +37,7 @@
             <version>5.10.0</version>
             <scope>runtime</scope>
         </dependency>
-        <dependency>
+        <dependency> <!-- https://github.com/graphql-java-kickstart/graphql-spring-boot/issues/175 -->
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
             <version>1.3.41</version>

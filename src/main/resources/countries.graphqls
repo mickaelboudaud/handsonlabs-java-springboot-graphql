@@ -1,11 +1,22 @@
+type Continent {
+  id: ID,
+  label: String
+}
+
+type Language {
+  id: ID,
+  name: String,
+  nativeName: String
+}
+
 type Country {
   id: ID!,
   name: String,
   nativeName: String,
   phone: String,
-  continentId: String,
+  continent: Continent,
   currencies: String,
-  languageIds: [String]
+  languages: [Language]
 }
 
 type Query {
