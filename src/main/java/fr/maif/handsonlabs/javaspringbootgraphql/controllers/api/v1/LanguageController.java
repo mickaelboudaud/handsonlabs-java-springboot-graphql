@@ -1,12 +1,12 @@
 package fr.maif.handsonlabs.javaspringbootgraphql.controllers.api.v1;
 
-import fr.maif.handsonlabs.javaspringbootgraphql.models.Continent;
 import fr.maif.handsonlabs.javaspringbootgraphql.models.Language;
-import fr.maif.handsonlabs.javaspringbootgraphql.services.ContinentService;
 import fr.maif.handsonlabs.javaspringbootgraphql.services.LanguageService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/languages")
@@ -19,7 +19,7 @@ public class LanguageController {
     }
 
     @GetMapping()
-    public Iterable<Language> findAll() {
+    public List<Language> findAll() {
         return languageService.findAll();
     }
 }

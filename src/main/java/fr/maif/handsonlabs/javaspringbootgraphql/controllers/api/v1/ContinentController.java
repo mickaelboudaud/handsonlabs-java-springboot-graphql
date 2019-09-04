@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("api/v1/continents")
 public class ContinentController {
@@ -18,7 +20,7 @@ public class ContinentController {
     }
 
     @GetMapping()
-    public Iterable<Continent> findAll() {
+    public List<Continent> findAll() {
         return continentService.findAll();
     }
 }

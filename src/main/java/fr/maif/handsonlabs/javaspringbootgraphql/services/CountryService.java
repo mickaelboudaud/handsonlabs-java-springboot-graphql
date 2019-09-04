@@ -4,6 +4,8 @@ import fr.maif.handsonlabs.javaspringbootgraphql.models.Country;
 import fr.maif.handsonlabs.javaspringbootgraphql.services.repositories.CountryRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CountryService {
 
@@ -13,7 +15,7 @@ public class CountryService {
         this.countryRepository = countryRepository;
     }
 
-    public Iterable<Country> findAll() {
+    public List<Country> findAll() {
         return countryRepository.findAll();
     }
 }
