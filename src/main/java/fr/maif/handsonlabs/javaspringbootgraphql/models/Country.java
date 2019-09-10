@@ -22,7 +22,7 @@ public class Country {
     private String phone;
 
     @Column(name = "continent", length = 2, nullable = false)
-    private String continent;
+    private String continentId;
 
     @Column(name = "capital", length = 256, nullable = false)
     private String capital;
@@ -31,8 +31,8 @@ public class Country {
     private String currencies;
 
     @ElementCollection
-    @CollectionTable(name="countries_languages", joinColumns=@JoinColumn(name="country_id"))
-    @Column(name="language_id")
+    @CollectionTable(name = "countries_languages", joinColumns = @JoinColumn(name = "country_id"))
+    @Column(name = "language_id")
     private Set<String> languageIds;
 
     public String getId() {
@@ -67,12 +67,12 @@ public class Country {
         this.phone = phone;
     }
 
-    public String getContinent() {
-        return continent;
+    public String getContinentId() {
+        return continentId;
     }
 
-    public void setContinent(String continent) {
-        this.continent = continent;
+    public void setContinentId(String continentId) {
+        this.continentId = continentId;
     }
 
     public String getCapital() {
@@ -108,7 +108,7 @@ public class Country {
             Objects.equals(name, country.name) &&
             Objects.equals(nativeName, country.nativeName) &&
             Objects.equals(phone, country.phone) &&
-            Objects.equals(continent, country.continent) &&
+            Objects.equals(continentId, country.continentId) &&
             Objects.equals(capital, country.capital) &&
             Objects.equals(currencies, country.currencies) &&
             Objects.equals(languageIds, country.languageIds);
@@ -116,7 +116,7 @@ public class Country {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, nativeName, phone, continent, capital, currencies, languageIds);
+        return Objects.hash(id, name, nativeName, phone, continentId, capital, currencies, languageIds);
     }
 
     @Override
@@ -126,7 +126,7 @@ public class Country {
             ", name='" + name + '\'' +
             ", nativeName='" + nativeName + '\'' +
             ", phone='" + phone + '\'' +
-            ", continent='" + continent + '\'' +
+            ", continent='" + continentId + '\'' +
             ", capital='" + capital + '\'' +
             ", currencies='" + currencies + '\'' +
             ", languageIds=" + languageIds +
