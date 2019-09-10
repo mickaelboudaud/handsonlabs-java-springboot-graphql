@@ -30,7 +30,7 @@ public class Country {
     @Column(name = "currencies", length = 256, nullable = false)
     private String currencies;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "countries_languages", joinColumns = @JoinColumn(name = "country_id"))
     @Column(name = "language_id")
     private Set<String> languageIds;
