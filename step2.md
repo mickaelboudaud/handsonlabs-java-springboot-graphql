@@ -16,3 +16,5 @@ Attention, pour rappel, les pojos ne doivent pas être modifié.
 
 - Écrire une requête listant tous les continents avec leurs pays associés.
 
+- Écrire une requête listant tous les continents avec leurs pays associés et à quel continent le pays appartient :).
+
