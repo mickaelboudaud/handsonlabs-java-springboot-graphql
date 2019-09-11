@@ -21,10 +21,10 @@ public class Query implements GraphQLQueryResolver {
     }
 
     public List<Country> countries() {
-        return (countryService.findAll());
+        return countryService.findAll();
     }
 
     public List<Continent> continents() {
-        return (continentService.findAll());
+        return continentService.findAll();
     }
 }
