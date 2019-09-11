@@ -1,6 +1,7 @@
 type Continent {
   id: ID,
-  label: String
+  label: String,
+  countries: [Country]
 }
 
 type Language {
@@ -21,4 +22,5 @@ type Country {
 
 type Query {
   countries: [Country]
+  continents: [Continent]
 }
