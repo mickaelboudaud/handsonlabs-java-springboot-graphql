@@ -22,6 +22,6 @@ type Country {
 
 type Query {
   countries: [Country]
-  countryById(id: ID!): Country
+  country(id: ID!): Country
   continents: [Continent]
 }

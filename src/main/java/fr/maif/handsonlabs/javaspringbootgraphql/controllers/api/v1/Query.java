@@ -25,7 +25,7 @@ public class Query implements GraphQLQueryResolver {
         return countryService.findAll();
     }
 
-    public Optional<Country> countryById(String id) {
+    public Optional<Country> country(String id) {
         return countryService.findById(id);
     }
 
