@@ -8,6 +8,7 @@ import fr.maif.handsonlabs.javaspringbootgraphql.services.CountryService;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class Query implements GraphQLQueryResolver {
@@ -21,10 +22,14 @@ public class Query implements GraphQLQueryResolver {
     }
 
     public List<Country> countries() {
-        return (countryService.findAll());
+        return countryService.findAll();
+    }
+
+    public Optional<Country> countryById(String id) {
+        return countryService.findById(id);
     }
 
     public List<Continent> continents() {
-        return (continentService.findAll());
+        return continentService.findAll();
     }
 }

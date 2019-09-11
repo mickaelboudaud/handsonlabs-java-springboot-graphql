@@ -5,6 +5,7 @@ import fr.maif.handsonlabs.javaspringbootgraphql.services.repositories.CountryRe
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CountryService {
@@ -13,6 +14,10 @@ public class CountryService {
 
     public CountryService(CountryRepository countryRepository) {
         this.countryRepository = countryRepository;
+    }
+
+    public Optional<Country> findById(String id) {
+        return countryRepository.findById(id);
     }
 
     public List<Country> findAll() {
