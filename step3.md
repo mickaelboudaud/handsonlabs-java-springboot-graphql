@@ -19,22 +19,22 @@ Utiliser le système de fragment de GraphQL pour définir les propriétés de co
 
 Pour information, jusqu'à présent, une syntaxe abrégée dans laquelle le mot clé `request` et le nom de la requête ont
 surement été omis. Ce nom n'est pas obligatoire mais son utilisation est encouragée car elle est très utile pour le 
-débogage et la journalisation côté serveur.
+débugage et la journalisation côté serveur.
 
 Jusqu'ici, nous avons écrit tous nos arguments à l'intérieur de la chaîne de requête. Mais dans la plupart des 
 applications, les arguments des champs seront dynamiques : par exemple, le choix d'un pays sera fait lors de la sélection
-d'un résultat de recherche dans un tableau. la requête GraphQl est à construire dynamiquement. En règle générale,
+d'un résultat de recherche dans un tableau. la requête GraphQl serait donc à construire dynamiquement. En règle générale,
 Nous ne devrions jamais effectuer d’interpolation de chaîne pour construire des requêtes à partir de valeurs fournies 
-par l’utilisateur. Une bonne pratique est d'indiquer les arguments de notre requête censés être dynamiques. GraphQl permet
+par l’utilisateur. Une bonne pratique est d'indiquer des arguments de requête censés être dynamiques. GraphQl permet
 cela avec son système de variable.
 
-- Écrire une requête variabilisée et nommée pour rechercher un pays par rapport à son identifiant. Si aucune variable
+- Écrire une requête nommée et variabilisée pour rechercher un pays par rapport à son identifiant. Si aucune variable
 n'est enseignée, la valeur par défaut sera la France.
 
 ## Étape 4 : Les directives
 
 Les variables nous permettent d'éviter d'interpoler manuellement des chaînes de charactères pour construire des requêtes 
-dynamiquement. Mais il serait aussi bien de pouvoir changer dynamiquement la structure et la forme de nos requêtes : 
+dynamiquement. Mais il serait aussi bien de pouvoir changer dynamiquement la structure et la forme de des requêtes : 
 par exemple, nous pouvons imaginer un composant d'interface utilisateur ayant une vue résumée et détaillée, 
 où l'un comprend plus de champs que l'autre. C'est ce qu'on appelle en GraphQl des directives.
 
