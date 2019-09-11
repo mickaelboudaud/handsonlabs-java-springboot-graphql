@@ -3,9 +3,9 @@
 ## Étape 1 : Ajout d'une requête paramétrée
 
 
-- Ajouter une query GraphQL pour pouvoir récupérer un pays à l'aide de son identifiant. 
+- Ajouter une query GraphQL pour pouvoir récupérer un pays à l'aide de son identifiant : `countryById`. 
 
-- Requeter un pays par exemple la France. 
+- Requeter un pays par exemple la France.
 
 ## Étape 2 : Alias et fragment
 
