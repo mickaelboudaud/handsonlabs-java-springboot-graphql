@@ -1,6 +1,7 @@
 package fr.maif.handsonlabs.javaspringbootgraphql.services;
 
 import fr.maif.handsonlabs.javaspringbootgraphql.models.Country;
+import fr.maif.handsonlabs.javaspringbootgraphql.models.Area;
 import fr.maif.handsonlabs.javaspringbootgraphql.services.repositories.CountryRepository;
 import org.springframework.stereotype.Service;
 
@@ -22,5 +23,17 @@ public class CountryService {
 
     public List<Country> findAll() {
         return countryRepository.findAll();
+    }
+
+    public Country editCountryArea(String countryId, Area area) {
+        final Optional<Country> maybeCountry = countryRepository.findById(countryId);
+
+        if (!maybeCountry.isPresent()) {
+            throw new IllegalArgumentException("Can not find the country to edit");
+        }
+
+        final Country country = maybeCountry.get();
+        country.setArea(area);
+        return countryRepository.save(country);
     }
 }

@@ -17,11 +17,26 @@ type Country {
   phone: String,
   continent: Continent,
   currencies: String,
+  area: Area,
   languages: [Language]
+}
+
+enum Area {
+  F0_T10000
+  F10000_T50000
+  F50000_T100000
+  F100000_T500000
+  F500000_T1000000
+  F1000000_T5000000
+  F5000000
 }
 
 type Query {
   countries: [Country]
   country(id: ID!): Country
   continents: [Continent]
+}
+
+type Mutation {
+  editCountryArea(countryId: ID!, area: Area!): Country
 }

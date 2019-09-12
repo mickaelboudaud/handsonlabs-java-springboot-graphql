@@ -36,7 +36,7 @@ public class Country {
     private Set<String> languageIds;
 
     @Column(name = "area", length = 64)
-    private CountryArea area;
+    private Area area;
 
     public String getId() {
         return id;
@@ -102,11 +102,11 @@ public class Country {
         this.languageIds = languageIds;
     }
 
-    public CountryArea getArea() {
+    public Area getArea() {
         return area;
     }
 
-    public void setArea(CountryArea area) {
+    public void setArea(Area area) {
         this.area = area;
     }
 
