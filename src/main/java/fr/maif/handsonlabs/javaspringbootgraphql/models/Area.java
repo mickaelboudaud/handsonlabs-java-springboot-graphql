@@ -1,14 +1,12 @@
 package fr.maif.handsonlabs.javaspringbootgraphql.models;
 
-import com.fasterxml.jackson.annotation.JsonValue;
-
 /**
  * Country Area.
  *
  * https://fr.wikipedia.org/wiki/Liste_des_pays_et_territoires_par_superficie#/media/Fichier:Countries_by_area.svg
  * https://fr.vikidia.org/wiki/Liste_des_pays_par_superficie
  */
-public enum CountryArea {
+public enum Area {
     F0_T10000("De 0 à 10000 Km²"),
     F10000_T50000("De 10000 à 50000 Km²"),
     F50000_T100000("De 50000 à 100000 Km²"),
@@ -19,7 +17,7 @@ public enum CountryArea {
 
     private String label;
 
-    CountryArea(String label) {
+    Area(String label) {
         this.label = label;
     }
 
