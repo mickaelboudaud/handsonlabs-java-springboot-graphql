@@ -20,6 +20,7 @@ CREATE TABLE countries
     continent VARCHAR(2) NOT NULL,
     capital VARCHAR(256) NOT NULL,
     currencies VARCHAR(256) NOT NULL,
+    area VARCHAR(32),
     FOREIGN KEY (continent) references continents(id)
 );
 
