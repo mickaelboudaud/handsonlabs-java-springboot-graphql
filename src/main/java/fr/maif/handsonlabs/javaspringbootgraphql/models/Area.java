@@ -4,7 +4,7 @@ package fr.maif.handsonlabs.javaspringbootgraphql.models;
  * Country Area.
  *
  * https://fr.wikipedia.org/wiki/Liste_des_pays_et_territoires_par_superficie#/media/Fichier:Countries_by_area.svg
- * https://fr.vikidia.org/wiki/Liste_des_pays_par_superficie
+ * https://fr.wikipedia.org/wiki/Liste_des_pays_et_territoires_par_superficie
  */
 public enum Area {
     F0_T10000("De 0 à 10000 Km²"),
