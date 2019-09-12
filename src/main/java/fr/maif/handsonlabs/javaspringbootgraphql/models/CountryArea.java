@@ -17,7 +17,6 @@ public enum CountryArea {
     F1000000_T5000000("De 1000000 à 5000000 Km²"),
     F5000000("Plus de 5000000 de Km²");
 
-    @JsonValue
     private String label;
 
     CountryArea(String label) {
