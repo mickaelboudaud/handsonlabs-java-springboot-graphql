@@ -30,13 +30,13 @@ public class Country {
     @Column(name = "currencies", length = 256, nullable = false)
     private String currencies;
 
-    @Column(name = "area", length = 64)
-    private CountryArea area;
-
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "countries_languages", joinColumns = @JoinColumn(name = "country_id"))
     @Column(name = "language_id")
     private Set<String> languageIds;
+
+    @Column(name = "area", length = 64)
+    private CountryArea area;
 
     public String getId() {
         return id;
@@ -102,6 +102,14 @@ public class Country {
         this.languageIds = languageIds;
     }
 
+    public CountryArea getArea() {
+        return area;
+    }
+
+    public void setArea(CountryArea area) {
+        this.area = area;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -114,12 +122,13 @@ public class Country {
             Objects.equals(continentId, country.continentId) &&
             Objects.equals(capital, country.capital) &&
             Objects.equals(currencies, country.currencies) &&
-            Objects.equals(languageIds, country.languageIds);
+            Objects.equals(languageIds, country.languageIds) &&
+            area == country.area;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, nativeName, phone, continentId, capital, currencies, languageIds);
+        return Objects.hash(id, name, nativeName, phone, continentId, capital, currencies, languageIds, area);
     }
 
     @Override
@@ -129,10 +138,11 @@ public class Country {
             ", name='" + name + '\'' +
             ", nativeName='" + nativeName + '\'' +
             ", phone='" + phone + '\'' +
-            ", continent='" + continentId + '\'' +
+            ", continentId='" + continentId + '\'' +
             ", capital='" + capital + '\'' +
             ", currencies='" + currencies + '\'' +
             ", languageIds=" + languageIds +
+            ", area=" + area +
             '}';
     }
 }
